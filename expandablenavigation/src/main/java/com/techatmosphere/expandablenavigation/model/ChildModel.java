@@ -8,6 +8,15 @@ package com.techatmosphere.expandablenavigation.model;
 public class ChildModel {
     String title;
     boolean isSelected;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     int id;
     public ChildModel(int id, String title){
         this.id = id;

@@ -14,6 +14,15 @@ public class HeaderModel {
     boolean isNew = false;
     boolean hasChild = false;
     boolean isSelected = false;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     int id = -1;
 
     List<ChildModel> childModelList = new ArrayList<>();

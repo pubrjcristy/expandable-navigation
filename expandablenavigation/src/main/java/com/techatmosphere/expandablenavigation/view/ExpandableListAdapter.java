@@ -61,6 +61,7 @@ class ExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.lblListItem);
 
         txtListChild.setText(childText.getTitle());
+        convertView.setId(childText.getId());
 
         return convertView;
     }
@@ -120,6 +121,8 @@ class ExpandableListAdapter extends BaseExpandableListAdapter {
         }else{
             isNew.setVisibility(View.GONE);
         }
+
+        convertView.setId(header.getId());
 
         return convertView;
     }
