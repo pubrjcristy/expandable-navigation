@@ -109,13 +109,13 @@ class ExpandableListAdapter extends BaseExpandableListAdapter {
         RelativeLayout layoutGroup = convertView.findViewById(R.id.layout_group);
         TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         ImageView ivGroupIndicator = convertView.findViewById(R.id.ivGroupIndicator);
-        ImageView iconMenu = convertView.findViewById(R.id.icon_menu);
+        //ImageView iconMenu = convertView.findViewById(R.id.icon_menu);
         TextView isNew = convertView.findViewById(R.id.is_new);
 
         lblListHeader.setText(header.getTitle());
 
         if(header.getResource() != -1)
-            iconMenu.setBackgroundResource(header.getResource());
+            //iconMenu.setBackgroundResource(header.getResource());
 
         if(header.isHasChild()){
             lblListHeader.setTypeface(null, Typeface.BOLD);
