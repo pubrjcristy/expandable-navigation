@@ -14,27 +14,32 @@ public class HeaderModel {
     boolean isNew = false;
     boolean hasChild = false;
     boolean isSelected = false;
+    int id = -1;
 
     List<ChildModel> childModelList = new ArrayList<>();
 
-    public HeaderModel(String title){
+    public HeaderModel(int id, String title){
+        this.id = id;
         this.title = title;
     }
 
-    public HeaderModel(String title, int resource){
+    public HeaderModel(int id, String title, int resource){
+        this.id = id;
         this.title = title;
         this.resource = resource;
     }
 
-    public HeaderModel(String title, int resource, boolean hasChild){
+    public HeaderModel(int id, String title, int resource, boolean hasChild){
+        this.id = id;
         this.title = title;
         this.resource = resource;
         this.hasChild = hasChild;
     }
 
-    public HeaderModel(String title, int resource, boolean hasChild, boolean isNew
+    public HeaderModel(int id, String title, int resource, boolean hasChild, boolean isNew
         , boolean isSelected
     ){
+        this.id = id;
         this.title = title;
         this.resource = resource;
         this.isNew = isNew;

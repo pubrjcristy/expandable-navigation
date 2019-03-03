@@ -62,12 +62,6 @@ class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         txtListChild.setText(childText.getTitle());
 
-        if(childText.isSelected()){
-            txtListChild.setTypeface(null, Typeface.BOLD);
-        }else {
-            txtListChild.setTypeface(null, Typeface.NORMAL);
-        }
-
         return convertView;
     }
 
@@ -114,31 +108,17 @@ class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         lblListHeader.setText(header.getTitle());
 
-        if(header.getResource() != -1)
-            //iconMenu.setBackgroundResource(header.getResource());
-
         if(header.isHasChild()){
             lblListHeader.setTypeface(null, Typeface.BOLD);
             ivGroupIndicator.setVisibility(View.VISIBLE);
         }else{
             ivGroupIndicator.setVisibility(View.GONE);
-            if(header.isSelected()){
-                lblListHeader.setTypeface(null, Typeface.BOLD);
-            }else {
-                lblListHeader.setTypeface(null, Typeface.NORMAL);
-            }
         }
 
         if(header.isNew()){
             isNew.setVisibility(View.VISIBLE);
         }else{
             isNew.setVisibility(View.GONE);
-        }
-
-        if (isExpanded) {
-            ivGroupIndicator.setImageResource(R.drawable.ic_arrow_up);
-        } else {
-            ivGroupIndicator.setImageResource(R.drawable.ic_arrow_down);
         }
 
         return convertView;
